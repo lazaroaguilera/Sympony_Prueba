@@ -5,3 +5,8 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+#añadido del video
+index:
+    path: /
+    controller: App\Controller\QuestionController::homepage
+
