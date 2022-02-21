@@ -17,9 +17,12 @@ class QuestionController
     }
 
     /**
-     * @Route("/questions/how-to-tie-my-shoes-with-magic")
+     * @Route("/questions/{slug}")
      */
-    public function show(){
-
+    public function show($slug){
+        return new Response(sprintf(
+            "La página futura para mostrar la preguntas es '%s'!",
+            str_replace("-"," ",$slug)
+        ));
     }
 }
